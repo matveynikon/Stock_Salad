@@ -1,0 +1,24 @@
+{
+  "name": "stripe-sample",
+  "version": "1.0.0",
+  "description": "A sample Stripe implementation",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "stripe-samples",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.17.1",
+    "firebase": "^9.18.0",
+    "mongodb": "^5.3.0",
+    "nodemon": "^2.0.22",
+    "npm": "^9.6.5",
+    "prompt-sync": "^4.2.0",
+    "string-similarity": "^4.0.4",
+    "stripe": "^8.222.0",
+    "timeme.js": "^2.1.0"
+  }
+}

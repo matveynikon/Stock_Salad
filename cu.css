@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+@media screen and (min-width: 951px) {
+    body{
+        font-family: 'Montserrat', sans-serif;
+        background: #71dac8;
+    }
+
+
+    #overcontcu{
+        position: relative;
+        width: 49.75%;
+        border-left: 7px solid gray;
+        margin-top: -520px;
+        left: 49.75%;
+        height: 650px;
+        background: white;
+        overflow: scroll;
+        overflow-x: hidden;
+        border-radius: 0px 15px 15px 0px;
+    }
+
+
+    hr{
+        padding-left: 20%;
+        padding-right: 20%;
+        margin-left: 25%;
+        margin-top: 8%;
+    }
+
+
+    h2{
+        font-size: 20px;
+    }
+
+
+    .contcu50{
+        margin-top: 2.5%;
+        height:1%;
+        
+    }
+
+
+
+
+
+    .sentcu50{
+        background: red;
+        color: red;
+        border-radius: 0px 4px 4px 0px;
+        position:relative;
+        left:8%;
+        width: 20%;
+        display: inline-block;
+
+    }    
+
+
+    .mccu50{
+        width: 25%;
+        display: inline-block;
+        margin-left: 4%;
+        
+    }
+
+
+
+
+
+    .hccu50{
+        margin-left: 5%;
+        display: inline-block;
+        
+        width: 16%;
+    }  
+
+
+    .iconcu{
+        position:relative;
+        display:inline-block;
+        left: 3%;
+        top: 130%;
+    }
+
+
+    .sncu{
+        display: inline-block;
+        font-size: 18px;
+        margin-left: 10%;
+    }    
+
+    .news2 {
+        border-radius: 5px;
+        background: rgb(152, 233, 195);
+        width: 0px;
+        height: 0px;
+        padding-top: 1%;
+        overflow: scroll;
+        border-radius: 0px 15px 15px 0px;
+        padding-left: 2%;
+        padding-right: 5%;
+        z-index: 14;
+        display: none;
+    }
+
+    .sum_news2 {
+        position: absolute;
+        top: 28%;
+        left: 45%;
+        border-radius: 5px;
+        background: lightgreen;
+        width: 0px;
+        height: 0px;
+        padding-left: 1%;
+        padding-top: 1%;
+        overflow: scroll;
+        border-radius: 15px 15px 0px 0px;
+        border-bottom: 5px solid gray;
+        padding-right: 2%;
+        z-index: 14;
+        display: none;
+    }
+
+
+
+
+    .dnbcu50{
+        display: inline-block;
+        margin-left: 25%;
+        background:rgb(5, 132, 98);
+        border: 2px solid rgb(5, 132, 98);
+        border-radius: 5px;
+    }
+
+
+
+
+    .rsb{
+        display: none;
+    }
+
+
+
+
+
+    #sr{
+        display: block;
+        position: sticky;
+    }
+
+
+    .randiv{
+        margin-top: 12.5%;
+    }
+
+    #nccu{
+        position:-webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 16000000000;
+    }
+
+
+}
+
+
+
+/****************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+********************/
+
+
+@media screen and (max-width: 950px) {
+    body{
+        font-family: 'Montserrat', sans-serif;
+        background: #71dac8;
+    }
+
+
+    #overcontcu{
+        position: relative;
+        border-right: 0px solid gray;
+        width: 100%;
+        top: 300px;
+        height: 650px;
+        background: white;
+        overflow: scroll;
+        border-radius: 15px;
+        overflow-x: hidden;
+    }
+
+
+    h2{
+        font-size: 20px;
+    }
+
+    .contcu50{
+        margin-top: 14%;
+        height:1%;
+        
+    }
+
+
+    .sentcu50{
+        background: red;
+        color: red;
+        border-radius: 0px 4px 4px 0px;
+        position:relative;
+        left:8%;
+        width: 20%;
+        display: inline-block;
+
+    }    
+
+
+    .mccu50{
+        width: 35%;
+        display: inline-block;
+        margin-left: 6%;
+        
+    }
+
+
+    .hccu50{
+        margin-left: 1%;
+        display: inline-block;
+        
+        width: 10%;
+    }  
+
+
+    .iconcu{
+        position:relative;
+        display:inline-block;
+        left: 2%;
+        top: 130%;
+    }
+
+
+    .sncu{
+        display: inline-block;
+        font-size: 18px;
+        margin-left: 20%;
+    }    
+
+    .news2 {
+        border-radius: 5px;
+        background: rgb(152, 233, 195);
+        width: 0px;
+        height: 0px;
+        padding-top: 1%;
+        overflow: scroll;
+        border-radius: 15px;
+        padding-left: 2%;
+        padding-right: 5%;
+        z-index: 14;
+        display: none;
+    }
+
+    /**
+
+    .sum_news {
+        position: absolute;
+        top: 28%;
+        left: 45%;
+        border-radius: 5px;
+        background: lightgreen;
+        width: 0px;
+        height: 0px;
+        padding-left: 1%;
+        padding-top: 1%;
+        overflow: scroll;
+        border-radius: 15px 15px 0px 0px;
+        border-bottom: 5px solid gray;
+        padding-right: 2%;
+        z-index: 14;
+        line-height: 160%;
+        display: none;
+    }
+    **/
+
+
+
+
+    .dnbcu50{
+        display: inline-block;
+        margin-left: 500%;
+        background:rgb(5, 132, 98);
+        border: 2px solid rgb(5, 132, 98);
+        border-radius: 5px;
+    }
+
+
+
+
+    .asfcu{
+        background:#71dac8;
+        border-radius: 0 5px 5px 0;
+        padding: 4% 4% 4% 4%;
+        position: sticky;
+        display: none;
+        top: 0;
+        z-index: 10;
+    }
+
+
+
+    .rsbcu{
+        display: none;
+    }
+
+
+
+    #sr{
+        display: block;
+        position: sticky;
+    }
+
+    #nccu{
+        position:-webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 16000000000;
+    }
+
+}
+
+
+

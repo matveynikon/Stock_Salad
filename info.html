@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stock Salad</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-auth-compat.js"></script>
+
+    <link rel="icon" href="Screenshot 2023-03-27 at 21.05.33.png">
+
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.2/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.2/firebase-ui-auth.css" />
+    <script>
+        document.addEventListener("contextmenu", (e) => {
+            e.preventDefault();
+        }, false);
+    </script>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+* {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+body{
+    background: #47bda9;
+}
+
+@media screen and (max-width: 500px) {
+    * {
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+        font-size: 15px;
+    }
+    ul.current{
+        background: #10caab;
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        margin-top: 4%;
+        font-size: 22px;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-radius: 6px;
+    }
+
+    ul.future{
+        background: #74de70;
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        margin-top: 2%;
+        font-size: 22px;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-radius: 6px;
+    }
+
+    li{
+        margin-left: 8%;
+        margin-top: 1%;
+    }
+
+    .lh{
+        padding-bottom: 2%;
+    }
+
+    .contfeat{
+        align-items: center;
+    }
+
+    .info{
+        margin-left: 5%;
+        margin-top: 2%;
+        font-size: 15px;
+        width: 90%;
+    }
+
+}
+
+
+@media screen and (min-width: 900px) {
+    ul.current{
+        background: #10caab;
+        width: 40%;
+        margin-left: 5%;
+        position: relative;
+        margin-top: 4%;
+        font-size: 22px;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-radius: 6px;
+    }
+
+    ul.future{
+        background: #74de70;
+        width: 40%;
+        margin-left: 5%;
+        position: relative;
+        margin-top: 2%;
+        font-size: 22px;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-radius: 6px;
+    }
+
+    li{
+        margin-left: 8%;
+        margin-top: 1%;
+    }
+
+    .lh{
+        padding-bottom: 2%;
+    }
+
+    .contfeat{
+        align-items: center;
+    }
+
+    .info{
+        margin-left: 5%;
+        margin-top: 2%;
+        font-size: 18px;
+        width: 60%;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="contfeat">
+
+<ul class="current">
+<div class="lh"><b>Current Features</b></div>
+<li>Sentiments of the biggest stocks</li>
+<li>Sentiments of the stocks of your choice</li>
+<li>Top stocks by sentiment</li>
+<li>Lowest stocks by sentiment</li>
+</ul>
+
+</div>
+
+</body>
+</html>
+

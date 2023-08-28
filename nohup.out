@@ -1,0 +1,1272 @@
+[33m[nodemon] 2.0.22[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node index.js`[39m
+node:events:491
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EBADF: bad file descriptor, read
+Emitted 'error' event on ReadStream instance at:
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at errorOrDestroy (node:internal/streams/destroy:214:7)
+    at node:internal/fs/streams:258:9
+    at FSReqCallback.wrapper [as oncomplete] (node:fs:687:5) {
+  errno: -9,
+  code: 'EBADF',
+  syscall: 'read'
+}
+
+Node.js v19.9.0
+[33m[nodemon] 2.0.22[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node index.js`[39m
+node:events:491
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EBADF: bad file descriptor, read
+Emitted 'error' event on ReadStream instance at:
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at errorOrDestroy (node:internal/streams/destroy:214:7)
+    at node:internal/fs/streams:258:9
+    at FSReqCallback.wrapper [as oncomplete] (node:fs:687:5) {
+  errno: -9,
+  code: 'EBADF',
+  syscall: 'read'
+}
+
+Node.js v19.9.0
+[33m[nodemon] 2.0.22[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node index.js`[39m
+new
+new visitor
+new visitor
+new visitor
+new visitor
+[32m[nodemon] restarting child process[39m
+[32m[nodemon] starting `node index.js`[39m
+new
+new visitor
+new visitor
+new visitor
+new visitor
+new visitor
+new visitor
+new visitor
+new visitor
+new visitor
+new visitor
+new visitor
+EVENT
+{
+  id: 'evt_1NEpyvGuzJmJKFGDjDOfWhP8',
+  object: 'event',
+  api_version: '2022-11-15',
+  created: 1685781521,
+  data: {
+    object: {
+      id: 'klarna_payments',
+      object: 'capability',
+      account: 'acct_1MeFSvGuzJmJKFGD',
+      future_requirements: [Object],
+      requested: true,
+      requested_at: 1685781513,
+      requirements: [Object],
+      status: 'active'
+    },
+    previous_attributes: { requirements: [Object], status: 'pending' }
+  },
+  livemode: true,
+  pending_webhooks: 1,
+  request: { id: null, idempotency_key: null },
+  type: 'capability.updated'
+}
+EVENT
+{
+  id: 'evt_1NEpyvGuzJmJKFGD9xePBd0D',
+  object: 'event',
+  api_version: '2022-11-15',
+  created: 1685781521,
+  data: {
+    object: {
+      id: 'acct_1MeFSvGuzJmJKFGD',
+      object: 'account',
+      business_profile: [Object],
+      capabilities: [Object],
+      charges_enabled: true,
+      controller: [Object],
+      country: 'BE',
+      default_currency: 'eur',
+      details_submitted: true,
+      email: 'levr.media9@gmail.com',
+      payouts_enabled: true,
+      settings: [Object],
+      type: 'standard'
+    },
+    previous_attributes: { capabilities: [Object] }
+  },
+  livemode: true,
+  pending_webhooks: 1,
+  request: { id: null, idempotency_key: null },
+  type: 'account.updated'
+}
+new visitor
+new visitor
+new visitor
+new visitor
+new visitor
+new visitor
+new visitor
+new visitor
+new visitor
+new visitor
+new visitor
+new visitor
+new visitor
+new visitor
+new visitor
+new visitor
+new visitor
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+new
+new visitor
+[33m[nodemon] 2.0.22[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node index.js`[39m
+new
+new visitor
+new visitor
+[33m[nodemon] 2.0.22[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node index.js`[39m
+new
+[33m[nodemon] 2.0.22[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node index.js`[39m
+new
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+null
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1685895010622
+}
+NO SUB
+aYxGdZnttVTGxGxv7Bhn39uFEGZ2
+null
+aYxGdZnttVTGxGxv7Bhn39uFEGZ2
+{
+  _id: new ObjectId("647cb815d6466065ae7ae803"),
+  iden: 'aYxGdZnttVTGxGxv7Bhn39uFEGZ2',
+  custom: [ 'nothing yet' ],
+  plt: 1685895189855
+}
+{
+  _id: new ObjectId("647cb815d6466065ae7ae803"),
+  iden: 'aYxGdZnttVTGxGxv7Bhn39uFEGZ2',
+  custom: [ 'nothing yet' ],
+  plt: 1685895189855
+}
+NO SUB
+{
+  _id: new ObjectId("647cb815d6466065ae7ae803"),
+  iden: 'aYxGdZnttVTGxGxv7Bhn39uFEGZ2',
+  custom: [ 'nothing yet' ],
+  plt: 1685895190419
+}
+NO SUB
+aYxGdZnttVTGxGxv7Bhn39uFEGZ2
+{
+  _id: new ObjectId("647cb815d6466065ae7ae803"),
+  iden: 'aYxGdZnttVTGxGxv7Bhn39uFEGZ2',
+  custom: [ 'nothing yet' ],
+  plt: 1685895189274
+}
+{
+  _id: new ObjectId("647cb815d6466065ae7ae803"),
+  iden: 'aYxGdZnttVTGxGxv7Bhn39uFEGZ2',
+  custom: [ 'nothing yet' ],
+  plt: 1685895189274
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1685895010154
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1685895010154
+}
+NO SUB
+[32m[nodemon] restarting child process[39m
+[32m[nodemon] starting `node index.js`[39m
+new
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1685895598186
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1685895598186
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1685903462326
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1685903462326
+}
+NO SUB
+new
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1687957534593
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1687957534593
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1687968071055
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1687968071055
+}
+NO SUB
+2PmXd6RiYPajsxYZDUvwNhM2Xxj1
+null
+2PmXd6RiYPajsxYZDUvwNhM2Xxj1
+{
+  _id: new ObjectId("649c597b6970242e71e95f73"),
+  iden: '2PmXd6RiYPajsxYZDUvwNhM2Xxj1',
+  custom: [ 'nothing yet' ],
+  plt: 1687968123957
+}
+{
+  _id: new ObjectId("649c597b6970242e71e95f73"),
+  iden: '2PmXd6RiYPajsxYZDUvwNhM2Xxj1',
+  custom: [ 'nothing yet' ],
+  plt: 1687968123957
+}
+NO SUB
+{
+  _id: new ObjectId("649c597b6970242e71e95f73"),
+  iden: '2PmXd6RiYPajsxYZDUvwNhM2Xxj1',
+  custom: [ 'nothing yet' ],
+  plt: 1687968124297
+}
+NO SUB
+2PmXd6RiYPajsxYZDUvwNhM2Xxj1
+{
+  _id: new ObjectId("649c597b6970242e71e95f73"),
+  iden: '2PmXd6RiYPajsxYZDUvwNhM2Xxj1',
+  custom: [ 'nothing yet' ],
+  plt: 1687968123440
+}
+{
+  _id: new ObjectId("649c597b6970242e71e95f73"),
+  iden: '2PmXd6RiYPajsxYZDUvwNhM2Xxj1',
+  custom: [ 'nothing yet' ],
+  plt: 1687968123440
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1687968088532
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1687968088532
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1687968149457
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1687968149457
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1687968187244
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1687968187244
+}
+NO SUB
+[33m[nodemon] 2.0.22[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node index.js`[39m
+node:events:491
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EBADF: bad file descriptor, read
+Emitted 'error' event on ReadStream instance at:
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at errorOrDestroy (node:internal/streams/destroy:214:7)
+    at node:internal/fs/streams:258:9
+    at FSReqCallback.wrapper [as oncomplete] (node:fs:687:5) {
+  errno: -9,
+  code: 'EBADF',
+  syscall: 'read'
+}
+
+Node.js v19.9.0
+[33m[nodemon] 2.0.22[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node index.js`[39m
+node:events:491
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EBADF: bad file descriptor, read
+Emitted 'error' event on ReadStream instance at:
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at errorOrDestroy (node:internal/streams/destroy:214:7)
+    at node:internal/fs/streams:258:9
+    at FSReqCallback.wrapper [as oncomplete] (node:fs:687:5) {
+  errno: -9,
+  code: 'EBADF',
+  syscall: 'read'
+}
+
+Node.js v19.9.0
+[33m[nodemon] 2.0.22[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node index.js`[39m
+node:events:491
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EBADF: bad file descriptor, read
+Emitted 'error' event on ReadStream instance at:
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at errorOrDestroy (node:internal/streams/destroy:214:7)
+    at node:internal/fs/streams:258:9
+    at FSReqCallback.wrapper [as oncomplete] (node:fs:687:5) {
+  errno: -9,
+  code: 'EBADF',
+  syscall: 'read'
+}
+
+Node.js v19.9.0
+[33m[nodemon] 2.0.22[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node index.js`[39m
+node:events:491
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EBADF: bad file descriptor, read
+Emitted 'error' event on ReadStream instance at:
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at errorOrDestroy (node:internal/streams/destroy:214:7)
+    at node:internal/fs/streams:258:9
+    at FSReqCallback.wrapper [as oncomplete] (node:fs:687:5) {
+  errno: -9,
+  code: 'EBADF',
+  syscall: 'read'
+}
+
+Node.js v19.9.0
+[33m[nodemon] 2.0.22[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node index.js`[39m
+node:events:491
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EBADF: bad file descriptor, read
+Emitted 'error' event on ReadStream instance at:
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at errorOrDestroy (node:internal/streams/destroy:214:7)
+    at node:internal/fs/streams:258:9
+    at FSReqCallback.wrapper [as oncomplete] (node:fs:687:5) {
+  errno: -9,
+  code: 'EBADF',
+  syscall: 'read'
+}
+
+Node.js v19.9.0
+[33m[nodemon] 2.0.22[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node index.js`[39m
+new
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689410980065
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689410980065
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689411139523
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689411139523
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689411690542
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689411690542
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689411779562
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689411779562
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689412030133
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689412030133
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689412577473
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689412577473
+}
+NO SUB
+[32m[nodemon] restarting child process[39m
+[32m[nodemon] starting `node index.js`[39m
+new
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689414058846
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689414058846
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689414927225
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689414927225
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689414938470
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689414938470
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689415068150
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689415068150
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689415222703
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689415222703
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689415273817
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689415273817
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689416934987
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689416934987
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689417620713
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689417620713
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689417636161
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689417636161
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689417706286
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689417706286
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689417765908
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689417765908
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689417882661
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689417882661
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689417911117
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689417911117
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689417926363
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689417926363
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689417994846
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689417994846
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689418170884
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689418170884
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689418891138
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689418891138
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689419040635
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689419040635
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689419534109
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689419534109
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689422689649
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689422689649
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689422701316
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689422701316
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689422732521
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689422732521
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689422783149
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689422783149
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689422829213
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689422829213
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689422836185
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689422836185
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689423066782
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689423066782
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689423097343
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689423097343
+}
+NO SUB
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+new
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+new
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689423166458
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689423166458
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689423508405
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689423508405
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689423528299
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689423528299
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689423561102
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689423561102
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689423616319
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689423616319
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689423694362
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689423694362
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689423754318
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689423754318
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689423801995
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689423801995
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689425106372
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689425106372
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689426507129
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689426507129
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689426708284
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689426708284
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689427929728
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689427929728
+}
+NO SUB
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+new
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node index.js`[39m
+new
+[33m[nodemon] 2.0.22[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node index.js`[39m
+new
+[33m[nodemon] 2.0.22[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node index.js`[39m
+new
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689431137161
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689431137161
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689431154020
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689431154020
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689431155893
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689431155893
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689431295398
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689431295398
+}
+NO SUB
+[32m[nodemon] restarting child process[39m
+[32m[nodemon] starting `node index.js`[39m
+new
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689432191916
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689432191916
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689432802627
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689432802627
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689433554842
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689433554842
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689440744576
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689440744576
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689447006310
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689447006310
+}
+NO SUB
+lHLjOdFVnidgYEbOlZrxj93yP0w2
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689491232755
+}
+{
+  _id: new ObjectId("647cb762d6466065ae7ae802"),
+  iden: 'lHLjOdFVnidgYEbOlZrxj93yP0w2',
+  custom: [ 'nothing yet' ],
+  plt: 1689491232755
+}
+NO SUB
+(node:187891) Warning: An error event has already been emitted on the socket. Please use the destroy method on the socket while handling a 'clientError' event.
+(Use `node --trace-warnings ...` to show where the warning was created)

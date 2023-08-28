@@ -1,0 +1,1 @@
+Arista Networks (formerly Arastra) is an American computer networking company headquartered in Santa Clara, California. The company designs and sells multilayer network switches to deliver software-defined networking (SDN) solutions for large datacenter, cloud computing, high-performance computing, and high-frequency trading environments.

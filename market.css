@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+
+
+
+
+@media screen and (max-width: 950px) {
+
+    #overcontav{
+        position: absolute;
+        width: 97.5%;
+        max-width: 97.5%;
+        top: 90px;
+        background: white;
+        overflow: scroll;
+        border-radius: 15px;
+        z-index: 9;
+    }
+    .avb{
+        padding-right: 4%;
+        background: rgb(0, 102, 128);
+        border-radius: 2px;
+        padding-top: 12%;
+        padding-bottom: 0%;
+        margin-bottom: 18%;
+        display: inline-block;
+        margin-left: 40%;
+    }
+
+    .contav{
+        padding-top: 0%;
+        padding-bottom: 0%;
+        height:1%;
+        
+    }
+
+
+    .hcdesc{
+        margin-right: 0%;
+        display: inline-block;
+        
+        width: 20%;
+    }  
+
+
+    .sndesc{
+        display: inline-block;
+        font-size: 13px;
+        margin-left: 10%;
+    }    
+
+    #desc{
+        float: right;
+    }
+    
+
+    .sentav{
+        background: red;
+        color: red;
+        border-radius: 0px 4px 4px 0px;
+        position:relative;
+        left:2%;
+        padding-top: 1.5%;
+        padding-bottom: 1.5%;
+        display: inline-block;
+
+    }    
+
+
+    .mcav{
+        width: 50%;
+        display: inline-block;
+        margin-left: 2%;
+        
+    }
+
+
+    .hcav{
+        margin-left: 2%;
+        display: inline-block;
+        
+        width: 16%;
+    }  
+
+
+    .snav{
+        display: inline-block;
+        font-size: 15px;
+        margin-left: 10%;
+        width: 200%;
+    }    
+
+
+
+    .dnbav{
+        display: inline-block;
+        margin-left: 5%;
+        background:rgb(5, 132, 98);
+        border: 2px solid rgb(5, 132, 98);
+        border-radius: 5px;
+    }
+
+
+
+
+    .asfav{
+        background:#71dac8;
+        border-radius: 0 5px 5px 0;
+        padding: 4% 4% 4% 4%;
+        position: sticky;
+        display: none;
+        top: 0;
+        z-index: 10;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 951px) {
+
+    .avb{
+        padding-right: 4%;
+        background: rgb(0, 102, 128);
+        border-radius: 2px;
+        padding-top: 12%;
+        padding-bottom: 0%;
+        margin-bottom: 18%;
+        display: inline-block;
+        margin-left: 40%;
+    }
+
+    #overcontav{
+        position: absolute;
+        width: 60%;
+        top: 40px;
+        background: white;
+        overflow: scroll;
+        border-radius: 15px;
+        left: 20%;
+        z-index: 9;
+    }
+
+    .contav{
+        padding-top: 1%;
+        padding-bottom: 1%;
+        height:1%;
+        
+    }
+
+
+    .hcdesc{
+        margin-right: 0%;
+        display: inline-block;
+        
+        width: 20%;
+    }  
+
+
+    .sndesc{
+        display: inline-block;
+        font-size: 18px;
+        margin-left: 25%;
+    }    
+
+    #desc{
+        float: right;
+    }
+    
+
+    .sentav{
+        background: red;
+        color: red;
+        border-radius: 0px 8px 8px 0px;
+        position:relative;
+        left:3%;
+        padding-top: 1.5%;
+        padding-bottom: 1.5%;
+        display: inline-block;
+
+    }    
+
+
+    .mcav{
+        width: 50%;
+        display: inline-block;
+        margin-left: 2%;
+        
+    }
+
+
+    .hcav{
+        margin-left: 2%;
+        display: inline-block;
+        
+        width: 16%;
+    }  
+
+
+    .snav{
+        display: inline-block;
+        font-size: 22px;
+        margin-left: 10%;
+    }    
+
+
+
+    .dnbav{
+        display: inline-block;
+        margin-left: 5%;
+        background:rgb(5, 132, 98);
+        border: 2px solid rgb(5, 132, 98);
+        border-radius: 5px;
+    }
+
+
+
+
+    .asfav{
+        background:#71dac8;
+        border-radius: 0 5px 5px 0;
+        padding: 4% 4% 4% 4%;
+        position: sticky;
+        display: none;
+        top: 0;
+        z-index: 10;
+    }
+
+
+}
+
+

@@ -1,0 +1,5 @@
+login first 
+
+subscribe 
+
+redirect to dashboard

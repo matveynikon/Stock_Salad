@@ -1,0 +1,206 @@
+@media screen and (max-width: 950px) {
+    .sn .sntext {
+        font-size: 16px;
+        visibility: hidden;
+        width: 97.5%;
+        background-color: white;
+        color: black;
+        padding: 5px 0;
+        border-radius: 6px;
+        border: 5px solid gray;
+    
+        /* Position the sn text - see examples below! */
+        position: absolute;
+        left: 0%;
+        z-index: 1;
+    }
+    
+    /* Show the sn text when you mouse over the sn container */
+    .sn:hover .sntext {
+        visibility: visible;
+    }
+
+    /********************/
+
+    .sncu .sncutext {
+        font-size: 16px;
+        visibility: hidden;
+        width: 97.5%;
+        background-color: white;
+        color: black;
+        padding: 5px 0;
+        border-radius: 6px;
+        border: 5px solid gray;
+    
+        /* Position the sn text - see examples below! */
+        position: absolute;
+        left: 0%;
+        z-index: 1;
+    }
+    
+    /* Show the sn text when you mouse over the sn container */
+    .sncu:hover .sncutext {
+        visibility: visible;
+    }
+
+    /********************/
+
+    .snhigh .snhightext {
+        font-size: 16px;
+        visibility: hidden;
+        width: 97.5%;
+        background-color: white;
+        color: black;
+        padding: 5px 0;
+        border-radius: 6px;
+        border: 5px solid gray;
+    
+        /* Position the sn text - see examples below! */
+        position: absolute;
+        left: 0%;
+        z-index: 1;
+    }
+
+    /* Show the sn text when you mouse over the sn container */
+    .snhigh:hover .snhightext {
+        visibility: visible;
+    }
+
+    /********************/
+
+    .snlow .snlowtext {
+        font-size: 16px;
+        visibility: hidden;
+        width: 97.5%;
+        background-color: white;
+        color: black;
+        padding: 5px 0;
+        border-radius: 6px;
+        border: 5px solid gray;
+    
+        /* Position the sn text - see examples below! */
+        position: absolute;
+        left: 0%;
+        z-index: 1;
+    }
+    
+    /* Show the sn text when you mouse over the sn container */
+    .snlow:hover .snlowtext {
+        visibility: visible;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 951px) {
+    .sn .sntext {
+        font-size: 16px;
+        visibility: hidden;
+        width: 450px;
+        background-color: white;
+        color: black;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        border: 5px solid gray;
+    
+        /* Position the sn text - see examples below! */
+        position: absolute;
+        z-index: 1;
+    }
+    
+    /* Show the sn text when you mouse over the sn container */
+    .sn:hover .sntext {
+        visibility: visible;
+    }
+
+    /********************/
+
+    .sncu .sncutext {
+        font-size: 16px;
+        visibility: hidden;
+        width: 450px;
+        background-color: white;
+        color: black;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        border: 5px solid gray;
+    
+        /* Position the sn text - see examples below! */
+        position: absolute;
+        z-index: 1;
+    }
+    
+    /* Show the sn text when you mouse over the sn container */
+    .sncu:hover .sncutext {
+        visibility: visible;
+    }
+
+    /********************/
+
+    .snhigh .snhightext {
+        font-size: 16px;
+        visibility: hidden;
+        width: 450px;
+        background-color: white;
+        color: black;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        border: 5px solid gray;
+    
+        /* Position the sn text - see examples below! */
+        position: absolute;
+        z-index: 1;
+    }
+    
+    /* Show the sn text when you mouse over the sn container */
+    .snhigh:hover .snhightext {
+        visibility: visible;
+    }
+
+    /********************/
+
+    .snlow .snlowtext {
+        font-size: 16px;
+        visibility: hidden;
+        width: 450px;
+        background-color: white;
+        color: black;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        border: 5px solid gray;
+    
+        /* Position the sn text - see examples below! */
+        position: absolute;
+        z-index: 1;
+    }
+    
+    /* Show the sn text when you mouse over the sn container */
+    .snlow:hover .snlowtext {
+        visibility: visible;
+    }
+
+
+}

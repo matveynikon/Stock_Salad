@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Stock Salad</title>
+    <!--<meta content="width=device-width, initial-scale=1" name="viewport" />-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="high.css">
+    <link rel="stylesheet" href="low.css">
+    <link rel="stylesheet" href="pop-up.css">
+    <link rel="stylesheet" href="cu.css">
+    <link rel="stylesheet" href="market.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="logo1.png">
+
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-auth-compat.js"></script>
+    <script src="//unpkg.com/string-similarity/umd/string-similarity.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.2/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.2/firebase-ui-auth.css" />
+
+    <script src="js_source/market.js"></script>
+    <script src="js_source/funcs1.js"></script>
+    <script src="js_source/high.js"></script>
+    <script src="js_source/low.js"></script>
+
+    <script type="module">
+
+      document.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+      }, false);
+
+        // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+      //import { getAuth } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+          apiKey: "AIzaSyDQS8jPZSO669Bv0yM6SpEnUX6zg0G1INc",
+          authDomain: "fcj1-e2ee0.firebaseapp.com",
+          databaseURL: "https://fcj1-e2ee0-default-rtdb.europe-west1.firebasedatabase.app",
+          projectId: "fcj1-e2ee0",
+          storageBucket: "fcj1-e2ee0.appspot.com",
+          messagingSenderId: "778753396177",
+          appId: "1:778753396177:web:ecbac51bf0368153a364f0",
+          measurementId: "G-NB29XY1P2R"
+      };
+      
+      const fba = firebase.initializeApp(firebaseConfig);
+
+
+      function lo1(){
+        firebase.auth().signOut().then(function() {
+          console.log("signed out")
+        }, function(error) {
+          console.log("error")
+        });
+      }
+
+
+      function initApp() {
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            // User is signed in.
+            var displayName = user.displayName;
+            var email = user.email;
+            var emailVerified = user.emailVerified;
+            var photoURL = user.photoURL;
+            var uid = user.uid;
+            window.uid = uid;
+
+            if (email.length > 17){
+              email = email.substring(0,14) + "...";
+            }
+
+            document.getElementById("uinfo").innerHTML = email
+
+
+            function sa(){
+                var lt = Date.now()
+                uid = window.uid
+                fetch('/sa', {
+                  method: 'POST',
+                  headers: {
+                    Authorization: 'Bearer abcdxyz',
+                    'Content-Type': 'application/octet-stream',
+                  },
+                  body: JSON.stringify({
+                    lt,
+                    uid
+                  }),
+                })
+                .then((res) => {
+                    return res.json();
+                })
+                .then(function dvf(data){
+                  ////alert((parseInt(Date.now()) - parseInt(data.plt))/1000)
+                  if((parseInt(Date.now()) - parseInt(data.plt))/1000 > 10080){
+                    document.body.innerHTML = `<div id="firebaseui-auth-container" style="display: none; z-index: 150; background: rgb(68, 241, 140); width: 100%; padding-top: 10%; padding-bottom: 10%; border-radius: 15px;"></div>`
+
+                    const firebaseConfig2 = {
+                        apiKey: "AIzaSyDQS8jPZSO669Bv0yM6SpEnUX6zg0G1INc",
+                        authDomain: "fcj1-e2ee0.firebaseapp.com",
+                        databaseURL: "https://fcj1-e2ee0-default-rtdb.europe-west1.firebasedatabase.app",
+                        projectId: "fcj1-e2ee0",
+                        storageBucket: "fcj1-e2ee0.appspot.com",
+                        messagingSenderId: "778753396177",
+                        appId: "1:778753396177:web:ecbac51bf0368153a364f0",
+                        measurementId: "G-NB29XY1P2R"
+                    };
+
+                    var uiConfig = {
+                      signInSuccessUrl: '/test.html',
+                      signInOptions: [
+                        // Leave the lines as is for the providers you want to offer your users.
+                        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                        firebase.auth.EmailAuthProvider.PROVIDER_ID
+                      ],
+                      // tosUrl and privacyPolicyUrl accept either url string or a callback
+                      // function.
+                      // Terms of service url/callback.
+                      tosUrl: 'tos.html',
+                      // Privacy policy url/callback.
+                      privacyPolicyUrl: function() {
+                        window.location.assign('privacy.html');
+                      }
+                    };
+
+                    // Initialize the FirebaseUI Widget using Firebase.
+                    firebase.initializeApp(firebaseConfig2);
+                    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+                    // The start method will wait until the DOM is loaded.
+                    ui.start('#firebaseui-auth-container', uiConfig);
+                    document.getElementById("firebaseui-auth-container").style.display = "block"
+                    window.stop()
+                  }
+                })
+            }
+
+            sa()
+
+            var mv = "market_av"
+
+            fetch('/market_av', {
+                
+                  method: 'POST',
+                  headers: {
+                    Authorization: 'Bearer abcdxyz',
+                    'Content-Type': 'application/octet-stream',
+                  },
+                  body: JSON.stringify({
+                    mv
+                  }),
+            })
+            .then((res) => {
+                return res.json();
+            })
+            .then(function dvf(data){
+              market_av(data.mav)
+            })
+
+
+            function get_stuff0(){
+                                uid = window.uid;
+                                //////console.log(`ahhhhhhhh: ${uid}`)
+                                var cv = "stuff"
+
+                                //////console.log(`UID: ${uid}`)
+                                var cs = false
+                                fetch('/gi', {
+                                method: 'POST',
+                                headers: {
+                                    Authorization: 'Bearer abcdxyz',
+                                    'Content-Type': 'application/octet-stream',
+                                },
+                                body: JSON.stringify({
+                                    cv,
+                                    uid,
+                                    cs
+                                }),
+                                })
+                                .then((res) => {
+                                    return res.json();
+                                })
+                                .then(function dvf(data){
+
+                                  //////alert(data.bottom2d)
+
+                                  function toTitleCase(str) {
+                                      return str.replace(
+                                      /\w\S*/g,
+                                      function(txt) {
+                                          return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+                                      }
+                                      );
+                                  }
+
+                                  var indarr = [];
+                                  var ind_names = [];
+                                  var indarr2 = [];
+                                  var ind_names2 = [];
+                                  var findarr = [];
+
+                                  if (data.status == "none"){
+                                      var ct = 31
+                                      var tt = 101
+                                      var tl = 31
+                                  }
+                                  //document.getElementById("vo2").innerHTML = data.vd
+                                  var cs2 = data.vd
+                                  window.dvd = cs2
+                                  for (var di = 1;di < ct;di++){
+                                      if (cs2[di] != "nothing yet" && cs2[di] != undefined){
+                                          //////console.log(`di ${cs2}`)
+                                          loadis2(di, cs2[di].toUpperCase())
+                                          for (var wv = 0; wv < 30000000; wv++){
+                                            var e8 = 1
+                                          }
+                                      }
+                                  }
+
+
+                                  var files2d = data.files2d
+                                  ////console.log(`FILES2D: ${files2d}`)
+                                  var cs2 = files2d
+                                  console.log(`Top stocks: ${cs2}`)
+                                  
+
+                                  for (var di = 0;di < tt;di++){
+                                      if (cs2[di] != "nothing yet"){
+                                          ////console.log(`di ${cs2}`)
+                                          loadis(di, cs2[di].toUpperCase())
+                                          for (var wv = 0; wv < 30000000; wv++){
+                                            var e8 = 1
+                                          }
+                                      }
+                                  }
+
+
+                                  var top2d = data.top2d
+                                  window.top2d = top2d
+                                  var cs2 = top2d
+
+                                  console.log(`TOP2D: ${top2d}`)
+
+                                  if(tl > 1){
+
+                                      for (var di = 0;di < tl;di++){
+                                          loadis3(di, cs2[di].toUpperCase())
+                                          for (var wv = 0; wv < 30000000; wv++){
+                                            var e8 = 1
+                                          }
+                                      }
+
+
+                                      var top7d = data.top7d
+                                      window.top7d = top7d
+
+
+                                      var top30d = data.top30d
+                                      window.top30d = top30d
+
+
+
+
+
+                                      var bottom2d = data.bottom2d
+                                      window.bottom2d = bottom2d
+                                      var cs2 = bottom2d
+
+                                      for (var di = 0;di < tl;di++){
+                                          loadis4(di, cs2[di].toUpperCase())
+                                          for (var wv = 0; wv < 30000000; wv++){
+                                              var e8 = 1
+                                          }
+                                      }
+
+                                  }
+                                  else{
+                                      var element = document.getElementById("overconthigh");
+                                      element.remove();
+
+                                      var element = document.getElementById("overcontlow");
+                                      element.remove();
+                                  }
+
+
+                                  var bottom7d = data.bottom7d
+                                  window.bottom7d = bottom7d
+
+
+                                  var bottom30d = data.bottom30d
+                                  window.bottom30d = bottom30d
+
+
+                                });
+
+            }
+
+            get_stuff0()
+
+
+
+
+
+            var phoneNumber = user.phoneNumber;
+            var providerData = user.providerData;
+            user.getIdToken().then(function(accessToken) {
+              ////console.log("327")
+              //firebase.auth().getInstance().signOut();
+            });
+          } else {
+            ////alert("not identified")
+          }
+        }, function(error) {
+          ////console.log(error);
+        });
+        
+      };
+
+      window.addEventListener('load', function() {
+          initApp()
+      });
+
+    </script>
+    <style>
+    .re{
+      padding: 2% 2% 2% 2%;
+      background: lightgrey;
+    }
+    .re:hover{
+      padding: 2% 2% 2% 2%;
+      background: grey;
+    }
+
+    .sr{
+      width: 30%;
+      height: 150px;
+      overflow: scroll;
+    }
+    #vo2{
+      position: absolute;
+      top: 50%;
+      left: 60%;
+    }
+
+    #uinfo{
+      background: rgb(68, 241, 140);
+      border: 1px solid black;
+      width: 140%;
+      padding-top: 1%;
+      padding-bottom: 1%;
+      text-align: center;
+      font-size: 14px;
+      overflow-x: hidden;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+      position: absolute;
+      top: 1%;
+      display: inline-block;
+      z-index: 19;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 140%;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 8px;
+      font-size: 12px;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #ddd;}
+
+    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+    .show {display:block;}
+
+    body{
+        font-family: 'Montserrat', sans-serif;
+        background: #47bda9;
+        overflow-y: hidden;
+    }
+
+    .ldi{
+      background:#47bda9;
+      width: 100%;
+      min-height: 100%; 
+      position: absolute;
+      z-index: 10000;
+    }
+
+    .loader {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 22%;
+    }
+
+    .loader::before {
+      content: "";
+      background: rgba(255, 255, 255, 0);
+      backdrop-filter: blur(8px);
+      position: absolute;
+      width: 140px;
+      height: 55px;
+      z-index: 20;
+      border-radius: 0 0 10px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.274);
+      border-top: none;
+      box-shadow: 0 15px 20px rgba(0, 0, 0, 0.082);
+      animation: anim2 2s infinite;
+    }
+
+    .loader div {
+      background: rgb(228, 228, 228);
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      z-index: -1;
+      animation: anim 2s infinite linear;
+      animation-delay: calc(-0.3s * var(--i));
+      transform: translateY(5px);
+      margin: 0.2em;
+    }
+
+    @keyframes anim {
+      0%,
+      100% {
+        transform: translateY(5px);
+      }
+      50% {
+        transform: translateY(-65px);
+      }
+    }
+
+    @keyframes anim2 {
+      0%,
+      100% {
+        transform: rotate(-10deg);
+      }
+      50% {
+        transform: rotate(10deg);
+      }
+    }
+
+
+    #eps{
+      text-align: left;
+
+    }
+
+    #rwc{
+      float: right;
+      margin-right: 2%;
+      display: none;
+    }
+
+    #em1{
+      background: orange;
+      padding-left: 2%;
+      padding-top: 1%;
+      padding-bottom: 1%;
+      display: none;
+    }
+    .sicon{
+      width: 12%;
+      cursor: pointer;
+    }
+    @media screen and (min-width: 701px) {
+        .sicon{
+          width: 5%;
+          position: absolute;
+          top: 0%;
+          right: 0%;
+          cursor: pointer;
+        }
+        @media screen and (max-width: 1250px) {
+            .pop{
+              margin-left: 34%;
+            }
+        
+            .popcu{
+              margin-left: 34%;
+            }
+        
+            .pophigh{
+              margin-left: 34%;
+            }
+        
+            .poplow{
+              margin-left: 34%;
+            }
+
+            .hrc{
+                padding-right: 55%;
+                margin-left: 0%;
+                margin-top: 16%;
+            }
+        }
+    }
+
+    </style>
+  </head>
+  <body>
+    <img src="logo1.png" style="display: inline-block; float: right;" class="sicon" alt="pretend the image loaded" onclick="window.location.replace('index.html')">
+
+    <div class="ldi" id="ldi">
+      &nbsp;
+      <div class="loader">
+            <div style="--i: 1"></div>
+            <div style="--i: 2"></div>
+            <div style="--i: 3"></div>
+            <div style="--i: 4"></div>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button onclick="dropu()" id="uinfo">User</button>
+    </div>
+
+
+    <script>
+    function dropu() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('#uinfo')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+
+
+
+    <div id="overcont">
+    <div id="nc"></div>
+
+    </div>
+
+
+
+
+    <div id="overcontcu">
+      <div id="nccu"></div>
+      <div id="em1"><button id="rwc" onclick="rwm1()">&#10006;</button></div>
+      <form action="/" method="post" class="asf" id="asfid">
+        <label for="fname">Add a Custom Ticker:</label><br>
+        <input type="text" id="cv" name="" value=""><br>
+      </form><div id="contf"></div>
+
+      <button type="button" style="border-radius: 8px; position: sticky; top: 0; float: right; z-index: 1000; background: rgb(68, 241, 140);border: 1px solid black; margin-right: 2%; margin-top: 1%; padding-top: 0.5%; padding-bottom: 0.5%;" onclick="add_stock()">Add Stock</button>
+      <button type="button" style="border-radius: 8px; position: sticky; top: 0; float: right; z-index: 1000; background: rgb(68, 241, 140);border: 1px solid black; margin-right: 0%; margin-top: 1%; padding-top: 0.5%; padding-bottom: 0.5%;" onclick="remove_stock()">Remove Stock</button>
+      <div class="randiv"></div>
+    </div>
+
+    
+    <div id="overconthigh">
+    <div id="nchigh"></div>
+
+    </div>
+
+
+    <div id="overcontlow">
+    <div id="nclow"></div>
+
+    </div>
+
+
+    <div id="overcontav">
+
+    </div>
+
+
+    <script src="js_source/funcs3.js"></script>
+
+  </body>
+</html>
+
+
+

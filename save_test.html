@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>stuff</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-auth-compat.js"></script>
+    <script src="//unpkg.com/string-similarity/umd/string-similarity.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.2/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.2/firebase-ui-auth.css" />
+    <script type="module">
+
+
+
+
+      function dn(news, stock){
+        var xhttp = new XMLHttpRequest();
+        xhttp.onload = function() {
+            var tc1 = this.responseText
+            document.getElementById(`nc`).innerHTML = `<div id='${news}' class="news">${tc1}</div>`
+            if (na == false){
+                document.getElementById(news).style.display = "none";
+                na = true
+            }
+            else{
+                na = false
+                document.getElementById(news).style.width = "42%";
+                document.getElementById(news).style.height = "210px";
+                document.getElementById(news).style.display = "block";
+            }
+        }
+        xhttp.open("GET", `tickers_2days/tickers/${stock}.txt`, true);
+        xhttp.send();
+
+      }
+
+
+
+      function loadis(si, name){
+        try{
+          var xhttp = new XMLHttpRequest();
+          xhttp.onload = function() {
+              var rt = this.responseText * -1
+              console.log(rt)
+              var styleSheet = document.createElement("style")
+              styleSheet.innerText += 
+              `#bl${si}{
+                  position: relative;
+                  padding-right: 0%;
+                  background: gray;
+                  border-radius: 2px;
+                  padding-top: 5%;
+                  padding-bottom: 5%;
+                  display: inline-block;
+                  left: 49%;
+              }`;
+              document.head.appendChild(styleSheet)
+
+              if(si == 1){
+                var csi = 0
+              }
+
+
+              if (parseFloat(rt) > 0){
+                  document.getElementById(`sent${si}`).style.width = (rt*2+"%");
+                  document.getElementById(`sent${si}`).style.left = "100%";
+                  document.getElementById(`bl${si}`).style.left = "-1%";
+                  document.getElementById(`overcont`).innerHTML += `<div class="cont50" id="cont${csi}"><div class='hc50'><h2 class='sn'>${name}: </h2></div><div class="mc50" id="mc${si}"><div class="sent50" id='sent${si}'>&nbsp;</div><div class="bl50" id='bl${si}'>&nbsp;</div></div><button onclick="dn('news${si}', '${name}')" class="dnb50" id='dnb${si}'>News Summaries</button></div>`
+                  document.getElementById(`overcont`).innerHTML += `<hr style="margin-left: 25%;"></hr>`
+                  
+              }
+              else if (parseFloat(rt) < 0){
+
+                  document.getElementById(`overcont`).innerHTML += `<div class="cont50" id="cont${csi}"><div class='hc50'><h2 class='sn'>${name}: </h2></div><div class="mc50" id="mc${si}"><div class="sent50" id='sent${si}'>&nbsp;</div><div class="bl50" id='bl${si}'>&nbsp;</div></div><button onclick="dn('news${si}', '${name}')" class="dnb50" id='dnb${si}'>News Summaries</button></div>`
+                  document.getElementById(`overcont`).innerHTML += `<hr style="margin-left: 27.5%;"></hr>`
+                  //document.getElementById(`nc`).innerHTML = `<div id='news${si}'>${tc1}</div>`
+
+                  document.getElementById(`bl${si}`).style.left = 95-((-rt*2)-1)+"%";
+                  //document.getElementById(`blcu${si}`).style.paddingRight = "0";
+                  //document.getElementById(`blcu${si}`).style.paddingLeft = "0%";
+
+                  document.getElementById(`mc${si}`).style.marginLeft = "4.8%";
+
+                  document.getElementById(`dnb${si}`).style.marginLeft = "25%";
+
+                  document.getElementById(`sent${si}`).style.width = (-rt*2)+"%";
+                  document.getElementById(`sent${si}`).style.borderRadius = "4px 0px 0px 4px"
+
+                  document.getElementById(`sent${si}`).style.left = (100 + 0 - (-rt*2)+"%");
+                  console.log(-rt+"%")
+                  document.getElementById(`sent${si}`).style.background = "green";
+
+
+              }
+              else if (parseFloat(rt) == 0){
+                  document.getElementById(`sent${si}`).style.paddingLeft = rt+"%";
+                  document.getElementById(`sent${si}`).style.background = "gray";
+              }
+
+
+              if(si == 0){
+                document.getElementById(`cont${csi}`).style.marginTop = "12%";
+              }
+
+
+          }
+          xhttp.open("GET", `tickers_2days/tickers/sent_${name}.txt`, true);
+          xhttp.send();
+        }
+
+
+
+        catch{
+              var rt = 0
+              console.log(rt)
+              var styleSheet = document.createElement("style")
+              styleSheet.innerText += 
+              `#bl${si}{
+                  position: relative;
+                  padding-right: 0%;
+                  background: gray;
+                  border-radius: 2px;
+                  padding-top: 5%;
+                  padding-bottom: 5%;
+                  display: inline-block;
+                  left: 49%;
+              }`;
+              document.head.appendChild(styleSheet)
+
+              if(si == 1){
+                var csi = 0
+              }
+
+
+              if (parseFloat(rt) > 0){
+                  document.getElementById(`sent${si}`).style.width = (rt*2+"%");
+                  document.getElementById(`sent${si}`).style.left = "100%";
+                  document.getElementById(`bl${si}`).style.left = "-1%";
+                  document.getElementById(`overcont`).innerHTML += `<div class="cont50" id="cont${csi}"><div class='hc50'><h2 class='sn'>${name}: </h2></div><div class="mc50" id="mc${si}"><div class="sent50" id='sent${si}'>&nbsp;</div><div class="bl50" id='bl${si}'>&nbsp;</div></div><button onclick="dn('news${si}', '${name}')" class="dnb50" id='dnb${si}'>News Summaries</button></div>`
+                  document.getElementById(`overcont`).innerHTML += `<hr style="margin-left: 25%;"></hr>`
+                  
+              }
+              else if (parseFloat(rt) < 0){
+
+                  document.getElementById(`overcont`).innerHTML += `<div class="cont50" id="cont${csi}"><div class='hc50'><h2 class='sn'>${name}: </h2></div><div class="mc50" id="mc${si}"><div class="sent50" id='sent${si}'>&nbsp;</div><div class="bl50" id='bl${si}'>&nbsp;</div></div><button onclick="dn('news${si}', '${name}')" class="dnb50" id='dnb${si}'>News Summaries</button></div>`
+                  document.getElementById(`overcont`).innerHTML += `<hr style="margin-left: 27.5%;"></hr>`
+                  //document.getElementById(`nc`).innerHTML = `<div id='news${si}'>${tc1}</div>`
+
+                  document.getElementById(`bl${si}`).style.left = 95-((-rt*2)-1)+"%";
+                  //document.getElementById(`blcu${si}`).style.paddingRight = "0";
+                  //document.getElementById(`blcu${si}`).style.paddingLeft = "0%";
+
+                  document.getElementById(`mc${si}`).style.marginLeft = "4.8%";
+
+                  document.getElementById(`dnb${si}`).style.marginLeft = "25%";
+
+                  document.getElementById(`sent${si}`).style.width = (-rt*2)+"%";
+                  document.getElementById(`sent${si}`).style.borderRadius = "4px 0px 0px 4px"
+
+                  document.getElementById(`sent${si}`).style.left = (100 + 0 - (-rt*2)+"%");
+                  console.log(-rt+"%")
+                  document.getElementById(`sent${si}`).style.background = "green";
+
+
+              }
+              else if (parseFloat(rt) == 0){
+                  document.getElementById(`sent${si}`).style.paddingLeft = rt+"%";
+                  document.getElementById(`sent${si}`).style.background = "gray";
+              }
+
+
+              if(si == 0){
+                document.getElementById(`cont${csi}`).style.marginTop = "12%";
+              }
+
+
+        }
+
+      }
+
+
+
+
+
+
+
+      function dn2(news, stock){
+        try{
+          var xhttp = new XMLHttpRequest();
+          xhttp.onload = function() {
+              var tc1 = this.responseText
+              document.getElementById(`nccu`).innerHTML = `<div id='${news}' class="news2">${tc1}</div>`
+              if (na == false){
+                  document.getElementById(news).style.display = "none";
+                  na = true
+              }
+              else{
+                  na = false
+                  document.getElementById(news).style.width = "42%";
+                  document.getElementById(news).style.height = "210px";
+                  document.getElementById(news).style.display = "block";
+              }
+          }
+          xhttp.open("GET", `tickers_2days/tickers/${stock}.txt`, true);
+          xhttp.send();
+        }
+        catch{
+              var tc1 = "No Info"
+              document.getElementById(`nccu`).innerHTML = `<div id='${news}' class="news2">${tc1}</div>`
+              if (na == false){
+                  document.getElementById(news).style.display = "none";
+                  na = true
+              }
+              else{
+                  na = false
+                  document.getElementById(news).style.width = "42%";
+                  document.getElementById(news).style.height = "210px";
+                  document.getElementById(news).style.display = "block";
+              }
+        }
+
+      }
+
+
+
+      function loadis2(si, name){
+        try{
+          if (si < 13){
+            var xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                var rt = this.responseText * -1
+                console.log(rt)
+                if (parseFloat(rt) > 0){
+                    document.getElementById(`sentcu${si}`).style.width = (rt*2+"%");
+                    document.getElementById(`sentcu${si}`).style.left = "100%";
+                    document.getElementById(`blcu${si}`).style.left = "-1%";
+                    document.getElementById(`overcontcu`).innerHTML += `<div id="contcu${si}"><div class='hccu${si}'><h2 class='sncu'>${name}: </h2></div><div id="mccu${si}"><div id='sentcu${si}'>&nbsp;</div><div id='blcu${si}'>&nbsp;</div></div><button onclick="dn2('newscu${si}', '${name}')" id='dnbcu${si}'>News Summaries2</button><button class="rsb" onclick="remove_this('${name}')" id="rsb${si}">&#10006;</button></div>`
+                    document.getElementById(`overcontcu`).innerHTML += `<hr style="margin-left: 27.5%;"></hr>`
+                    
+                }
+                else if (parseFloat(rt) < 0){
+
+                    document.getElementById(`overcontcu`).innerHTML += `<div id="contcu${si}"><div class='hccu${si}'><h2 class='sncu'>${name}: </h2></div><div id="mccu${si}"><div id='sentcu${si}'>&nbsp;</div><div id='blcu${si}'>&nbsp;</div></div><button onclick="dn2('newscu${si}', '${name}')" id='dnbcu${si}'>News Summaries2</button><button class="rsb" onclick="remove_this('${name}')" id="rsb${si}">&#10006;</button></div>`
+                    document.getElementById(`overcontcu`).innerHTML += `<hr style="margin-left: 27.5%;"></hr>`
+                    //document.getElementById(`nc`).innerHTML = `<div id='news${si}'>${tc1}</div>`
+
+                    document.getElementById(`blcu${si}`).style.left = 95-((-rt*2)-1)+"%";
+                    //document.getElementById(`blcu${si}`).style.paddingRight = "0";
+                    //document.getElementById(`blcu${si}`).style.paddingLeft = "0%";
+
+                    document.getElementById(`mccu${si}`).style.marginLeft = "4.8%";
+
+                    document.getElementById(`dnbcu${si}`).style.marginLeft = "25%";
+
+                    document.getElementById(`sentcu${si}`).style.width = (-rt*2)+"%";
+                    document.getElementById(`sentcu${si}`).style.borderRadius = "4px 0px 0px 4px"
+
+                    document.getElementById(`sentcu${si}`).style.left = (100 + 0 - (-rt*2)+"%");
+                    console.log(-rt+"%")
+                    document.getElementById(`sentcu${si}`).style.background = "green";
+
+
+                }
+                else if (parseFloat(rt) == 0){
+                    document.getElementById(`sentcu${si}`).style.paddingLeft = rt+"%";
+                    document.getElementById(`sentcu${si}`).style.background = "gray";
+                }
+
+                if(si == 2){
+                  document.getElementById(`contcu${si}`).style.marginTop = "12%";
+                }
+
+            }
+            xhttp.open("GET", `tickers_2days/tickers/sent_${name}.txt`, true);
+            xhttp.send();
+          }
+        }
+        
+        catch{
+          if (si < 13){
+                var rt = 0
+                console.log(rt)
+                if (parseFloat(rt) > 0){
+                    document.getElementById(`sentcu${si}`).style.width = (rt*2+"%");
+                    document.getElementById(`sentcu${si}`).style.left = "100%";
+                    document.getElementById(`blcu${si}`).style.left = "-1%";
+                    document.getElementById(`overcontcu`).innerHTML += `<div id="contcu${si}"><div class='hccu${si}'><h2 class='sncu'>${name}: </h2></div><div id="mccu${si}"><div id='sentcu${si}'>&nbsp;</div><div id='blcu${si}'>&nbsp;</div></div><button onclick="dn2('newscu${si}', '${name}')" id='dnbcu${si}'>News Summaries2</button><button class="rsb" onclick="remove_this('${name}')" id="rsb${si}">&#10006;</button></div>`
+                    document.getElementById(`overcontcu`).innerHTML += `<hr style="margin-left: 27.5%;"></hr>`
+                    
+                }
+                else if (parseFloat(rt) < 0){
+
+                    document.getElementById(`overcontcu`).innerHTML += `<div id="contcu${si}"><div class='hccu${si}'><h2 class='sncu'>${name}: </h2></div><div id="mccu${si}"><div id='sentcu${si}'>&nbsp;</div><div id='blcu${si}'>&nbsp;</div></div><button onclick="dn2('newscu${si}', '${name}')" id='dnbcu${si}'>News Summaries2</button><button class="rsb" onclick="remove_this('${name}')" id="rsb${si}">&#10006;</button></div>`
+                    document.getElementById(`overcontcu`).innerHTML += `<hr style="margin-left: 27.5%;"></hr>`
+                    //document.getElementById(`nc`).innerHTML = `<div id='news${si}'>${tc1}</div>`
+
+                    document.getElementById(`blcu${si}`).style.left = 95-((-rt*2)-1)+"%";
+                    //document.getElementById(`blcu${si}`).style.paddingRight = "0";
+                    //document.getElementById(`blcu${si}`).style.paddingLeft = "0%";
+
+                    document.getElementById(`mccu${si}`).style.marginLeft = "4.8%";
+
+                    document.getElementById(`dnbcu${si}`).style.marginLeft = "25%";
+
+                    document.getElementById(`sentcu${si}`).style.width = (-rt*2)+"%";
+                    document.getElementById(`sentcu${si}`).style.borderRadius = "4px 0px 0px 4px"
+
+                    document.getElementById(`sentcu${si}`).style.left = (100 + 0 - (-rt*2)+"%");
+                    console.log(-rt+"%")
+                    document.getElementById(`sentcu${si}`).style.background = "green";
+
+
+                }
+                else if (parseFloat(rt) == 0){
+                    document.getElementById(`sentcu${si}`).style.paddingLeft = rt+"%";
+                    document.getElementById(`sentcu${si}`).style.background = "gray";
+                }
+
+                if(si == 2){
+                  document.getElementById(`contcu${si}`).style.marginTop = "12%";
+                }
+
+          }
+        }
+
+      }
+
+
+
+
+
+
+
+
+
+        // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+          apiKey: "AIzaSyDQS8jPZSO669Bv0yM6SpEnUX6zg0G1INc",
+          authDomain: "fcj1-e2ee0.firebaseapp.com",
+          databaseURL: "https://fcj1-e2ee0-default-rtdb.europe-west1.firebasedatabase.app",
+          projectId: "fcj1-e2ee0",
+          storageBucket: "fcj1-e2ee0.appspot.com",
+          messagingSenderId: "778753396177",
+          appId: "1:778753396177:web:ecbac51bf0368153a364f0",
+          measurementId: "G-NB29XY1P2R"
+      };
+      
+      firebase.initializeApp(firebaseConfig);
+      function initApp() {
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            // User is signed in.
+            var displayName = user.displayName;
+            var email = user.email;
+            var emailVerified = user.emailVerified;
+            var photoURL = user.photoURL;
+            var uid = user.uid;
+            window.uid = uid;
+
+
+
+            function get_stuff0(){
+                uid = window.uid;
+                console.log(`ahhhhhhhh: ${uid}`)
+                var cv = "stuff"
+
+                console.log(`UID: ${uid}`)
+                var cs = false
+                fetch('/gi', {
+                  method: 'POST',
+                  headers: {
+                    Authorization: 'Bearer abcdxyz',
+                    'Content-Type': 'application/octet-stream',
+                  },
+                  body: JSON.stringify({
+                    cv,
+                    uid,
+                    cs
+                  }),
+                })
+                .then((res) => {
+                    return res.json();
+                })
+                .then(function dvf(data){
+
+                  alert(data.top2d)
+                  alert(data.bottom2d)
+
+                  function toTitleCase(str) {
+                    return str.replace(
+                      /\w\S*/g,
+                      function(txt) {
+                        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+                      }
+                    );
+                  }
+
+                  var indarr = [];
+                  var ind_names = [];
+                  var indarr2 = [];
+                  var ind_names2 = [];
+                  var findarr = [];
+
+                  document.getElementById("status").innerHTML = data.status
+                  //document.getElementById("vo2").innerHTML = data.vd
+                  var cs2 = data.vd.split(",")
+                  window.dvd = cs2
+                  for (var di = 1;di < 13;di++){
+                      if (cs2[di] != "nothing yet"){
+                        console.log(`di ${cs2}`)
+                        loadis2(di, cs2[di])
+                      }
+                  }
+
+
+                  var files2d = data.files2d
+                  console.log(`FILES2D: ${files2d}`)
+                  var cs2 = files2d
+                  console.log(cs2)
+                  for (var di = 0;di < cs2.length;di++){
+                      if (cs2[di] != "nothing yet"){
+                        console.log(`di ${cs2}`)
+                        loadis(di, cs2[di])
+                      }
+                  }
+
+                  var files7d = data.files7d
+                  console.log(`FILES7D: ${files7d}`)
+                  window.files7d = files7d
+
+
+                  var files30d = data.files30d
+                  console.log(`FILES30D: ${files30d}`)
+                  window.files30d = files30d
+
+                }
+                );
+            }
+
+            get_stuff0()
+
+
+
+
+
+            var phoneNumber = user.phoneNumber;
+            var providerData = user.providerData;
+            user.getIdToken().then(function(accessToken) {
+              console.log("327")
+              //firebase.auth().getInstance().signOut();
+            });
+          } else {
+            // User is signed out.
+          }
+        }, function(error) {
+          console.log(error);
+        });
+        
+      };
+
+      window.addEventListener('load', function() {
+          initApp()
+      });
+
+    </script>
+    <style>
+    .re{
+      padding: 2% 2% 2% 2%;
+      background: lightgrey;
+    }
+    .re:hover{
+      padding: 2% 2% 2% 2%;
+      background: grey;
+    }
+
+    .sr{
+      width: 30%;
+      height: 150px;
+      overflow: scroll;
+    }
+    #vo2{
+      position: absolute;
+      top: 50%;
+      left: 60%;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>curls</h1>
+    <div id="vo3"></div>
+    <div id="status"></div>
+    <div id="chart"></div>
+
+
+    <div id="overcont">
+    <button type="button" onclick="setTimeout(function(){d7()}, 2000);" style="background: lightgrey; border: 10px solid lightgrey; border-radius: 15px; position: sticky; top: 0; float: right;">7 Days</button>
+    <button type="button" onclick="setTimeout(function(){d30()}, 2000);" style="background: lightgrey; border: 10px solid lightgrey; border-radius: 15px; position: sticky; top: 0; float: right;">30 Days</button>
+
+    </div>
+    <div id="nc"></div>
+
+
+
+
+
+    <div id="overcontcu">
+      <form action="/" method="post" class="asf" id="asfid">
+        <label for="fname">Custom stuff:</label><br>
+        <input type="text" id="cv" name="cv" value="cv"><br>
+      </form><div id="contf"></div>
+
+      <button type="button" onclick="setTimeout(function(){d7v2()}, 2000);" style="background: lightgrey; border: 10px solid lightgrey; border-radius: 15px; position: sticky; top: 0; float: right;">7 Days</button>
+      <button type="button" onclick="setTimeout(function(){d30v2()}, 2000);" style="background: lightgrey; border: 10px solid lightgrey; border-radius: 15px; position: sticky; top: 0; float: right;">30 Days</button>
+      <button type="button" style="background: lightgrey; border: 10px solid lightgrey; border-radius: 15px; position: sticky; top: 0; float: right;" onclick="add_stock()">Add Stock</button>
+      <button type="button" style="background: lightgrey; border: 10px solid lightgrey; border-radius: 15px; position: sticky; top: 0; float: right;" onclick="remove_stock()">Remove Stock</button>
+    </div>
+    <div id="nccu"></div>
+
+    
+    <div id="highcont">
+      <button type="button" onclick="setTimeout(function(){d7v3()}, 2000);" style="background: lightgrey; border: 10px solid lightgrey; border-radius: 15px; position: sticky; top: 0; float: right;">7 Days</button>
+      <button type="button" onclick="setTimeout(function(){d30v3()}, 2000);" style="background: lightgrey; border: 10px solid lightgrey; border-radius: 15px; position: sticky; top: 0; float: right;">30 Days</button>
+  
+    </div>
+
+
+    <div id="lowcont">
+      <button type="button" onclick="setTimeout(function(){d7v3()}, 2000);" style="background: lightgrey; border: 10px solid lightgrey; border-radius: 15px; position: sticky; top: 0; float: right;">7 Days</button>
+      <button type="button" onclick="setTimeout(function(){d30v3()}, 2000);" style="background: lightgrey; border: 10px solid lightgrey; border-radius: 15px; position: sticky; top: 0; float: right;">30 Days</button>
+  
+    </div>
+
+
+
+
+
+    <script>
+
+      function loadis(si, name){
+        try{
+          var xhttp = new XMLHttpRequest();
+          xhttp.onload = function() {
+              var rt = this.responseText * -1
+              console.log(rt)
+              var styleSheet = document.createElement("style")
+              styleSheet.innerText += 
+              `#bl${si}{
+                  position: relative;
+                  padding-right: 0%;
+                  background: gray;
+                  border-radius: 2px;
+                  padding-top: 5%;
+                  padding-bottom: 5%;
+                  display: inline-block;
+                  left: 49%;
+              }`;
+
+              document.head.appendChild(styleSheet)
+
+              if(si == 1){
+                var csi = 0
+              }
+
+              if (parseFloat(rt) > 0){
+                  document.getElementById(`sent${si}`).style.width = (rt*2+"%");
+                  document.getElementById(`sent${si}`).style.left = "100%";
+                  document.getElementById(`bl${si}`).style.left = "-1%";
+                  document.getElementById(`overcont`).innerHTML += `<div class="cont50" id="cont${csi}"><div class='hc50'><h2 class='sn'>${name}: </h2></div><div class="mc50" id="mc${si}"><div class="sent50" id='sent${si}'>&nbsp;</div><div class="bl50" id='bl${si}'>&nbsp;</div></div><button onclick="dn('news${si}', '${name}')" class="dnb50" id='dnb${si}'>News Summaries</button></div>`
+                  document.getElementById(`overcont`).innerHTML += `<hr style="margin-left: 25%;"></hr>`
+                  
+              }
+              else if (parseFloat(rt) < 0){
+
+                  document.getElementById(`overcont`).innerHTML += `<div class="cont50" id="cont${csi}"><div class='hc50'><h2 class='sn'>${name}: </h2></div><div class="mc50" id="mc${si}"><div class="sent50" id='sent${si}'>&nbsp;</div><div class="bl50" id='bl${si}'>&nbsp;</div></div><button onclick="dn('news${si}', '${name}')" class="dnb50" id='dnb${si}'>News Summaries</button></div>`
+                  document.getElementById(`overcont`).innerHTML += `<hr style="margin-left: 27.5%;"></hr>`
+                  //document.getElementById(`nc`).innerHTML = `<div id='news${si}'>${tc1}</div>`
+
+                  document.getElementById(`bl${si}`).style.left = 95-((-rt*2)-1)+"%";
+                  //document.getElementById(`blcu${si}`).style.paddingRight = "0";
+                  //document.getElementById(`blcu${si}`).style.paddingLeft = "0%";
+
+                  document.getElementById(`mc${si}`).style.marginLeft = "4.8%";
+
+                  document.getElementById(`dnb${si}`).style.marginLeft = "25%";
+
+                  document.getElementById(`sent${si}`).style.width = (-rt*2)+"%";
+                  document.getElementById(`sent${si}`).style.borderRadius = "4px 0px 0px 4px"
+
+                  document.getElementById(`sent${si}`).style.left = (100 + 0 - (-rt*2)+"%");
+                  console.log(-rt+"%")
+                  document.getElementById(`sent${si}`).style.background = "green";
+
+
+              }
+
+              else if (parseFloat(rt) == 0){
+                  document.getElementById(`sent${si}`).style.paddingLeft = rt+"%";
+                  document.getElementById(`sent${si}`).style.background = "gray";
+              }
+
+
+              if(si == 0){
+                document.getElementById(`cont${csi}`).style.marginTop = "12%";
+              }
+
+
+          }
+          xhttp.open("GET", `tickers_7days/tickers/sent_${name}.txt`, true);
+          xhttp.send();
+
+        }
+        catch{
+              var rt = 0
+              console.log(rt)
+              var styleSheet = document.createElement("style")
+              styleSheet.innerText += 
+              `#bl${si}{
+                  position: relative;
+                  padding-right: 0%;
+                  background: gray;
+                  border-radius: 2px;
+                  padding-top: 5%;
+                  padding-bottom: 5%;
+                  display: inline-block;
+                  left: 49%;
+              }`;
+
+              document.head.appendChild(styleSheet)
+
+              if(si == 1){
+                var csi = 0
+              }
+
+              if (parseFloat(rt) > 0){
+                  document.getElementById(`sent${si}`).style.width = (rt*2+"%");
+                  document.getElementById(`sent${si}`).style.left = "100%";
+                  document.getElementById(`bl${si}`).style.left = "-1%";
+                  document.getElementById(`overcont`).innerHTML += `<div class="cont50" id="cont${csi}"><div class='hc50'><h2 class='sn'>${name}: </h2></div><div class="mc50" id="mc${si}"><div class="sent50" id='sent${si}'>&nbsp;</div><div class="bl50" id='bl${si}'>&nbsp;</div></div><button onclick="dn('news${si}', '${name}')" class="dnb50" id='dnb${si}'>News Summaries</button></div>`
+                  document.getElementById(`overcont`).innerHTML += `<hr style="margin-left: 25%;"></hr>`
+                  
+              }
+              else if (parseFloat(rt) < 0){
+
+                  document.getElementById(`overcont`).innerHTML += `<div class="cont50" id="cont${csi}"><div class='hc50'><h2 class='sn'>${name}: </h2></div><div class="mc50" id="mc${si}"><div class="sent50" id='sent${si}'>&nbsp;</div><div class="bl50" id='bl${si}'>&nbsp;</div></div><button onclick="dn('news${si}', '${name}')" class="dnb50" id='dnb${si}'>News Summaries</button></div>`
+                  document.getElementById(`overcont`).innerHTML += `<hr style="margin-left: 27.5%;"></hr>`
+                  //document.getElementById(`nc`).innerHTML = `<div id='news${si}'>${tc1}</div>`
+
+                  document.getElementById(`bl${si}`).style.left = 95-((-rt*2)-1)+"%";
+                  //document.getElementById(`blcu${si}`).style.paddingRight = "0";
+                  //document.getElementById(`blcu${si}`).style.paddingLeft = "0%";
+
+                  document.getElementById(`mc${si}`).style.marginLeft = "4.8%";
+
+                  document.getElementById(`dnb${si}`).style.marginLeft = "25%";
+
+                  document.getElementById(`sent${si}`).style.width = (-rt*2)+"%";
+                  document.getElementById(`sent${si}`).style.borderRadius = "4px 0px 0px 4px"
+
+                  document.getElementById(`sent${si}`).style.left = (100 + 0 - (-rt*2)+"%");
+                  console.log(-rt+"%")
+                  document.getElementById(`sent${si}`).style.background = "green";
+
+
+              }
+
+              else if (parseFloat(rt) == 0){
+                  document.getElementById(`sent${si}`).style.paddingLeft = rt+"%";
+                  document.getElementById(`sent${si}`).style.background = "gray";
+              }
+
+
+              if(si == 0){
+                document.getElementById(`cont${csi}`).style.marginTop = "12%";
+              }
+
+        }
+
+      }
+
+
+      
+      function d7(){
+        document.getElementById("overcont").innerHTML = `    <button type="button" onclick="setTimeout(function(){d7()}, 2000);" style="background: lightgrey; border: 10px solid lightgrey; border-radius: 15px; position: sticky; top: 0; float: right;">7 Days</button>
+    <button type="button" onclick="setTimeout(function(){d7()}, 2000);" style="background: lightgrey; border: 10px solid lightgrey; border-radius: 15px; position: sticky; top: 0; float: right;">30 Days</button>`
+        cs2 = window.files7d
+        for (var di = 0;di < cs2.length;di++){
+                      if (cs2[di] != "nothing yet"){
+                        console.log(`di ${cs2}`)
+                        loadis(di, cs2[di])
+                      }
+        }
+      }
+
+      function d30(){
+        document.getElementById("overcont").innerHTML = `    <button type="button" onclick="setTimeout(function(){d7()}, 2000);" style="background: lightgrey; border: 10px solid lightgrey; border-radius: 15px; position: sticky; top: 0; float: right;">7 Days</button>
+    <button type="button" onclick="setTimeout(function(){d30()}, 2000);" style="background: lightgrey; border: 10px solid lightgrey; border-radius: 15px; position: sticky; top: 0; float: right;">30 Days</button>`
+        cs2 = window.files30d
+        for (var di = 0;di < cs2.length;di++){
+                      if (cs2[di] != "nothing yet"){
+                        console.log(`di ${cs2}`)
+                        loadis(di, cs2[di])
+                      }
+        }
+      }
+
+      function d7v2(){
+        document.getElementById("overcontcu").innerHTML = `    <button type="button" onclick="setTimeout(function(){d7()}, 2000);" style="background: lightgrey; border: 10px solid lightgrey; border-radius: 15px; position: sticky; top: 0; float: right;">7 Days</button>
+    <button type="button" onclick="setTimeout(function(){d7()}, 2000);" style="background: lightgrey; border: 10px solid lightgrey; border-radius: 15px; position: sticky; top: 0; float: right;">30 Days</button>`
+        cs2 = window.files7d
+        for (var di = 0;di < cs2.length;di++){
+                      if (cs2[di] != "nothing yet"){
+                        console.log(`di ${cs2}`)
+                        loadis2(di, cs2[di])
+                      }
+        }
+      }
+
+      function d30v2(){
+        document.getElementById("overcontcu").innerHTML = `    <button type="button" onclick="setTimeout(function(){d7v2()}, 2000);" style="background: lightgrey; border: 10px solid lightgrey; border-radius: 15px; position: sticky; top: 0; float: right;">7 Days</button>
+    <button type="button" onclick="setTimeout(function(){d30v2()}, 2000);" style="background: lightgrey; border: 10px solid lightgrey; border-radius: 15px; position: sticky; top: 0; float: right;">30 Days</button>`
+        cs2 = window.files30d
+        for (var di = 0;di < cs2.length;di++){
+                      if (cs2[di] != "nothing yet"){
+                        console.log(`di ${cs2}`)
+                        loadis2(di, cs2[di])
+                      }
+        }
+      }
+
+
+      na = true
+
+
+      function dn(news, stock){
+        try{
+          var xhttp = new XMLHttpRequest();
+          xhttp.onload = function() {
+              var tc1 = this.responseText
+              document.getElementById(`nc`).innerHTML = `<div id='${news}' class="news">${tc1}</div>`
+              if (na == false){
+                  document.getElementById(news).style.display = "none";
+                  na = true
+              }
+              else{
+                  na = false
+                  document.getElementById(news).style.width = "42%";
+                  document.getElementById(news).style.height = "210px";
+                  document.getElementById(news).style.display = "block";
+              }
+          }
+          xhttp.open("GET", `tickers_2days/tickers/${stock}.txt`, true);
+          xhttp.send();
+        }
+        catch{
+              var tc1 = 0
+              document.getElementById(`nc`).innerHTML = `<div id='${news}' class="news">${tc1}</div>`
+              if (na == false){
+                  document.getElementById(news).style.display = "none";
+                  na = true
+              }
+              else{
+                  na = false
+                  document.getElementById(news).style.width = "42%";
+                  document.getElementById(news).style.height = "210px";
+                  document.getElementById(news).style.display = "block";
+              }
+        }
+
+      }
+
+
+      na2 = true
+
+
+      function dn2(news, stock){
+
+        try{
+          var xhttp = new XMLHttpRequest();
+          xhttp.onload = function() {
+              var tc1 = this.responseText
+              document.getElementById(`nccu`).innerHTML = `<div id='${news}' class="news2">${tc1}</div>`
+              if (na2 == false){
+                  document.getElementById(news).style.display = "none";
+                  na2 = true
+              }
+              else{
+                  na2 = false
+                  document.getElementById(news).style.width = "42%";
+                  document.getElementById(news).style.height = "210px";
+                  document.getElementById(news).style.display = "block";
+              }
+          }
+          xhttp.open("GET", `tickers_2days/tickers/${stock}.txt`, true);
+          xhttp.send();
+        }
+
+        catch{
+              var tc1 = 0
+              document.getElementById(`nccu`).innerHTML = `<div id='${news}' class="news2">${tc1}</div>`
+              if (na2 == false){
+                  document.getElementById(news).style.display = "none";
+                  na2 = true
+              }
+              else{
+                  na2 = false
+                  document.getElementById(news).style.width = "42%";
+                  document.getElementById(news).style.height = "210px";
+                  document.getElementById(news).style.display = "block";
+              }
+        }
+
+      }
+
+
+
+      function loadis2(si, name){
+        try{
+          if (si < 13){
+            var xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                rt = this.responseText * -1
+                console.log(rt)
+                if (parseFloat(rt) > 0){
+                    document.getElementById(`sentcu${si}`).style.width = (rt*2+"%");
+                    document.getElementById(`sentcu${si}`).style.left = "100%";
+                    document.getElementById(`blcu${si}`).style.left = "-1%";
+                    document.getElementById(`overcontcu`).innerHTML += `<div id="contcu${si}"><div class='hccu${si}'><h2 class='sncu'>${name}: </h2></div><div id="mccu${si}"><div id='sentcu${si}'>&nbsp;</div><div id='blcu${si}'>&nbsp;</div></div><button onclick="dn2('newscu${si}', '${name}')" id='dnbcu${si}'>News Summaries2</button><button class="rsb" onclick="remove_this('${name}')" id="rsb${si}">&#10006;</button></div>`
+                    document.getElementById(`overcontcu`).innerHTML += `<hr style="margin-left: 27.5%;"></hr>`
+                    
+                }
+                else if (parseFloat(rt) < 0){
+
+                    document.getElementById(`overcontcu`).innerHTML += `<div id="contcu${si}"><div class='hccu${si}'><h2 class='sncu'>${name}: </h2></div><div id="mccu${si}"><div id='sentcu${si}'>&nbsp;</div><div id='blcu${si}'>&nbsp;</div></div><button onclick="dn2('newscu${si}', '${name}')" id='dnbcu${si}'>News Summaries2</button><button class="rsb" onclick="remove_this('${name}')" id="rsb${si}">&#10006;</button></div>`
+                    document.getElementById(`overcontcu`).innerHTML += `<hr style="margin-left: 27.5%;"></hr>`
+                    //document.getElementById(`nc`).innerHTML = `<div id='news${si}'>${tc1}</div>`
+
+                    document.getElementById(`blcu${si}`).style.left = 95-((-rt*2)-1)+"%";
+                    //document.getElementById(`blcu${si}`).style.paddingRight = "0";
+                    //document.getElementById(`blcu${si}`).style.paddingLeft = "0%";
+
+                    document.getElementById(`mccu${si}`).style.marginLeft = "4.8%";
+
+                    document.getElementById(`dnbcu${si}`).style.marginLeft = "25%";
+
+                    document.getElementById(`sentcu${si}`).style.width = (-rt*2)+"%";
+                    document.getElementById(`sentcu${si}`).style.borderRadius = "4px 0px 0px 4px"
+
+                    document.getElementById(`sentcu${si}`).style.left = (100 + 0 - (-rt*2)+"%");
+                    console.log(-rt+"%")
+                    document.getElementById(`sentcu${si}`).style.background = "green";
+
+
+                }
+                else if (parseFloat(rt) == 0){
+                    document.getElementById(`sentcu${si}`).style.paddingLeft = rt+"%";
+                    document.getElementById(`sentcu${si}`).style.background = "gray";
+                }
+
+                if(si == 2){
+                  document.getElementById(`contcu${si}`).style.marginTop = "12%";
+                  console.log("ccu")
+                }
+
+            }
+            xhttp.open("GET", `tickers_2days/tickers/sent_${name}.txt`, true);
+            xhttp.send();
+          }
+
+        }
+
+        catch{
+                rt = 0
+                console.log(rt)
+                if (parseFloat(rt) > 0){
+                    document.getElementById(`sentcu${si}`).style.width = (rt*2+"%");
+                    document.getElementById(`sentcu${si}`).style.left = "100%";
+                    document.getElementById(`blcu${si}`).style.left = "-1%";
+                    document.getElementById(`overcontcu`).innerHTML += `<div id="contcu${si}"><div class='hccu${si}'><h2 class='sncu'>${name}: </h2></div><div id="mccu${si}"><div id='sentcu${si}'>&nbsp;</div><div id='blcu${si}'>&nbsp;</div></div><button onclick="dn2('newscu${si}', '${name}')" id='dnbcu${si}'>News Summaries2</button><button class="rsb" onclick="remove_this('${name}')" id="rsb${si}">&#10006;</button></div>`
+                    document.getElementById(`overcontcu`).innerHTML += `<hr style="margin-left: 27.5%;"></hr>`
+                    
+                }
+                else if (parseFloat(rt) < 0){
+
+                    document.getElementById(`overcontcu`).innerHTML += `<div id="contcu${si}"><div class='hccu${si}'><h2 class='sncu'>${name}: </h2></div><div id="mccu${si}"><div id='sentcu${si}'>&nbsp;</div><div id='blcu${si}'>&nbsp;</div></div><button onclick="dn2('newscu${si}', '${name}')" id='dnbcu${si}'>News Summaries2</button><button class="rsb" onclick="remove_this('${name}')" id="rsb${si}">&#10006;</button></div>`
+                    document.getElementById(`overcontcu`).innerHTML += `<hr style="margin-left: 27.5%;"></hr>`
+                    //document.getElementById(`nc`).innerHTML = `<div id='news${si}'>${tc1}</div>`
+
+                    document.getElementById(`blcu${si}`).style.left = 95-((-rt*2)-1)+"%";
+                    //document.getElementById(`blcu${si}`).style.paddingRight = "0";
+                    //document.getElementById(`blcu${si}`).style.paddingLeft = "0%";
+
+                    document.getElementById(`mccu${si}`).style.marginLeft = "4.8%";
+
+                    document.getElementById(`dnbcu${si}`).style.marginLeft = "25%";
+
+                    document.getElementById(`sentcu${si}`).style.width = (-rt*2)+"%";
+                    document.getElementById(`sentcu${si}`).style.borderRadius = "4px 0px 0px 4px"
+
+                    document.getElementById(`sentcu${si}`).style.left = (100 + 0 - (-rt*2)+"%");
+                    console.log(-rt+"%")
+                    document.getElementById(`sentcu${si}`).style.background = "green";
+
+
+                }
+                else if (parseFloat(rt) == 0){
+                    document.getElementById(`sentcu${si}`).style.paddingLeft = rt+"%";
+                    document.getElementById(`sentcu${si}`).style.background = "gray";
+                }
+
+                if(si == 2){
+                  document.getElementById(`contcu${si}`).style.marginTop = "12%";
+                  console.log("ccu")
+                }
+        }
+
+
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      function get_stuff1(cv){
+          uid = window.uid;
+
+          console.log(`UID: ${uid}`)
+          cs = true
+          fetch('/testf', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/octet-stream',
+            },
+            body: JSON.stringify({
+              cv,
+              uid,
+              cs
+            }),
+          })
+          .then((res) => {
+              return res.json();
+          })
+          .then(function dvf(data){
+            //document.getElementById("vo2").innerHTML = data.vd
+            cs2 = data.vd3
+            console.log(`CS2: ${cs2}`)
+            if (data.vde == "too many stocks"){
+              alert("too many stocks")
+            }
+            else{
+              cs2 = data.vd3.split(",")
+              if(data.vde == "duplicate"){
+                alert("duplicate")
+              }
+              else{
+                /*
+                for (di = 1;di < cs2.length;di++){
+                    if (cs2[di] != "nothing yet"){
+                      console.log(`di20 ${cs2[di]}`)
+                      loadis2(di, cs2[di])
+                    }
+                }
+                */
+                if (cs2[cs2.length-1] != "nothing yet"){
+                      console.log(`di20 ${cs2[cs2.length-1]}`)
+                      loadis2(cs2.length-1, cs2[cs2.length-1])
+                }
+              }
+            }
+          }
+          );
+      }
+
+
+
+
+      function get_stuff2(){
+          uid = window.uid;
+          const cv = document
+            .querySelector('#cv').value;
+
+          console.log(`UID: ${uid}`)
+          cs = false
+          fetch('/gi', {
+            method: 'POST',
+            headers: {
+              Authorization: 'Bearer abcdxyz',
+              'Content-Type': 'application/octet-stream',
+            },
+            body: JSON.stringify({
+              cv,
+              uid,
+              cs
+            }),
+          })
+          .then((res) => {
+              return res.json();
+          })
+          .then(function dvf(data){
+            if (data.files2d.length > 10){
+              window.sf = data.files2d
+              console.log(window.sf.length)
+              var stockl = window.sf
+              var matches = []
+              var matches2 = []
+              for(si = 0;si < stockl.length;si++){
+                console.log(`similarity: ${stringSimilarity.compareTwoStrings(String(document.querySelector('#cv').value).toLowerCase(), stockl[si])}`);
+                matches.push(stringSimilarity.compareTwoStrings(String(document.querySelector('#cv').value).toLowerCase(), stockl[si]))
+                matches2.push(stringSimilarity.compareTwoStrings(String(document.querySelector('#cv').value).toLowerCase(), stockl[si]))
+              }
+              matches.sort(function(a, b) {
+                return b - a;
+              });
+              matches = [...new Set(matches)];
+
+              console.log(matches);
+              vos = `<div class='sr'>`
+              for (sr = 0;sr < matches.length;sr++){
+                vos += `<div class='re' onclick="get_stuff1('${stockl[matches2.indexOf(matches[sr])].replace('.txt', '')}')">${stockl[matches2.indexOf(matches[sr])].replace('.txt', '')}</div>`
+              }
+              vos += `</div>`
+              document.getElementById("contf").innerHTML = vos
+            }
+          }
+          );
+      }
+      
+
+
+      function add_stock(){
+
+        if (document.getElementById("asfid").style.display == "block"){
+          document.getElementById("asfid").style.display = "none"
+        }
+        else{
+          document.getElementById("asfid").style.display = "block"
+          document.getElementById('cv')
+            .addEventListener('input', (e) => {
+              console.log("INPUT DETECTED")
+              get_stuff2()
+            });
+
+        }
+
+      }
+
+
+
+      function remove_stock(){
+        var cols = document.getElementsByClassName('rsb');
+        for(i = 0; i < cols.length; i++) {
+          cols[i].style.display = 'inline-block';
+        }
+
+      }
+
+      function remove_this(stock_name){
+          uid = window.uid;
+          const cv = stock_name
+
+          console.log(`UID remove this: ${uid}`)
+          cs = "remove"
+          fetch('/remove', {
+            method: 'POST',
+            headers: {
+              Authorization: 'Bearer abcdxyz',
+              'Content-Type': 'application/octet-stream',
+            },
+            body: JSON.stringify({
+              cv,
+              uid,
+              cs
+            }),
+          })
+          .then((res) => {
+              return res.json();
+          })
+          .then(function dvf(data){
+            console.log(`REMOVED: ${data.vd2}`)
+            document.getElementById(`overcontcu`).innerHTML = `      <button type="button" style="background: lightgrey; border: 10px solid lightgrey; border-radius: 15px; position: sticky; top: 0; float: right;" onclick="add_stock()">Add Stock</button>
+      <button type="button" style="background: lightgrey; border: 10px solid lightgrey; border-radius: 15px; position: sticky; top: 0; float: right;" onclick="remove_stock()">Remove Stock</button>`
+            var cs2 = data.vd2.split(",")
+            for (var di = 1;di < 13;di++){
+              if (cs2[di] != "nothing yet"){
+                console.log(`di ${cs2[di]}`)
+                loadis2(di, cs2[di])
+              }
+            }
+          }
+          );
+      }
+
+
+
+    </script>
+
+
+  </body>
+</html>
+
+
+

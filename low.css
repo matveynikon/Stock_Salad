@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+@media screen and (min-width: 951px) {
+    body{
+        font-family: 'Montserrat', sans-serif;
+        background: #71dac8;
+    }
+
+
+    #overcontlow{
+        position: relative;
+        width: 49.75%;
+        border-left: 7px solid gray;
+        margin-top: -650px;
+        left: 49.75%;
+        height: 650px;
+        background: white;
+        overflow: scroll;
+        overflow-x: hidden;
+        border-radius: 0px 15px 15px 0px;
+    }
+
+
+    hr{
+        width: 25%;
+        margin-left: 14%;
+        margin-top: 8%;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    .contlow50{
+        margin-top: 2.5%;
+        height:1%;
+        
+    }
+
+
+    .iconlow{
+        position:relative;
+        display:inline-block;
+        left: 3%;
+        top: 130%;
+    }
+
+
+
+    .sentlow50{
+        background: red;
+        color: red;
+        border-radius: 0px 4px 4px 0px;
+        position:relative;
+        left:8%;
+        width: 20%;
+        display: inline-block;
+
+    }    
+
+
+    .mclow50{
+        width: 25%;
+        display: inline-block;
+        margin-left: 4%;
+        
+    }
+
+
+
+
+
+    .hclow50{
+        margin-left: 5%;
+        display: inline-block;
+        
+        width: 16%;
+    }  
+
+
+
+
+    .snlow{
+        display: inline-block;
+        font-size: 18px;
+        margin-left: 10%;
+    }    
+
+    .news4 {
+        border-radius: 5px;
+        background: rgb(152, 233, 195);
+        width: 0px;
+        height: 0px;
+        padding-top: 1%;
+        overflow: scroll;
+        border-radius: 0px 15px 15px 0px;
+        padding-left: 2%;
+        padding-right: 5%;
+        z-index: 14;
+        display: none;
+    }
+
+
+    .newslow50 {
+        margin-left: 0%;
+        margin-top: 1%;
+        border-radius: 5px;
+        background: rgb(141, 212, 208);
+        width: 0px;
+        height: 0px;
+        padding-left: 1%;
+        padding-top: 1%;
+        overflow: scroll;
+        border-radius: 15px;
+        display: none;
+    }
+
+
+
+
+
+
+    .dnblow50{
+        display: inline-block;
+        margin-left: 18%;
+        background:rgb(5, 132, 98);
+        border: 2px solid rgb(5, 132, 98);
+        border-radius: 5px;
+    }
+
+
+
+
+    .asflow{
+        background:rgb(141, 212, 208);
+        border-radius: 15px;
+        padding: 4% 4% 4% 4%;
+        position: sticky;
+        display: none;
+        top: 0;
+        z-index: 10;
+    }
+
+
+
+    .rsblow{
+        display: none;
+    }
+
+    #nclow{
+        position:-webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 16000000000;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 950px) {
+    body{
+        font-family: 'Montserrat', sans-serif;
+        background: #71dac8;
+    }
+
+
+    #overcontlow{
+        position: relative;
+        border-right: 0px solid gray;
+        width: 100%;
+        top: 500px;
+        height: 650px;
+        background: white;
+        overflow: scroll;
+        overflow-x: hidden;
+        border-radius: 15px;
+    }
+
+
+    h2{
+        font-size: 20px;
+    }
+
+    .contlow50{
+        margin-top: 14%;
+        height:1%;
+        
+    }
+
+
+    .sentlow50{
+        background: red;
+        color: red;
+        border-radius: 0px 4px 4px 0px;
+        position:relative;
+        left:0%;
+        width: 20%;
+        display: inline-block;
+
+    }    
+
+
+    .mclow50{
+        width: 35%;
+        display: inline-block;
+        margin-left: 6%;
+        
+    }
+
+
+    .hclow50{
+        margin-left: 1%;
+        display: inline-block;
+        
+        width: 10%;
+    }  
+
+
+    .iconlow{
+        position:relative;
+        display:inline-block;
+        left: 2%;
+        top: 130%;
+    }
+
+
+    .snlow{
+        display: inline-block;
+        font-size: 18px;
+        margin-left: 20%;
+    }    
+
+    .news4 {
+        border-radius: 5px;
+        background: rgb(152, 233, 195);
+        width: 0px;
+        height: 0px;
+        padding-top: 1%;
+        overflow: scroll;
+        border-radius: 15px;
+        padding-left: 2%;
+        padding-right: 5%;
+        z-index: 14;
+        display: none;
+    }
+
+    /**
+
+    .sum_news {
+        position: absolute;
+        top: 28%;
+        left: 45%;
+        border-radius: 5px;
+        background: lightgreen;
+        width: 0px;
+        height: 0px;
+        padding-left: 1%;
+        padding-top: 1%;
+        overflow: scroll;
+        border-radius: 15px 15px 0px 0px;
+        border-bottom: 5px solid gray;
+        padding-right: 2%;
+        z-index: 14;
+        line-height: 160%;
+        display: none;
+    }
+    **/
+
+
+
+
+    .dnblow50{
+        display: inline-block;
+        margin-left: 17%;
+        background:rgb(5, 132, 98);
+        border: 2px solid rgb(5, 132, 98);
+        border-radius: 5px;
+    }
+
+
+
+
+    .asflow{
+        background:#71dac8;
+        border-radius: 0 5px 5px 0;
+        padding: 4% 4% 4% 4%;
+        position: sticky;
+        display: none;
+        top: 0;
+        z-index: 10;
+    }
+
+
+
+    .rsblow{
+        display: none;
+    }
+
+
+
+    #srlow{
+        display: block;
+    }
+
+    #nclow{
+        position:-webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 16000000000;
+    }
+
+}
+
+
+
