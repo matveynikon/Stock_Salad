@@ -9,7 +9,8 @@ Main dashboard consists of 4 sections in a grid, these are:
 
 This is just a prototype. Security vulnerabilities, backend infrastructure and other more technical aspects aren't taken into account.
 
-This project uses the following libraries and frameworks:
+This project uses the following libraries, frameworks and APIs:
 1. Stripe NodeJS API
 2. Firebase SDK
-3. d
+3. Alphavantage financial data API
+4. Polygon financial data API
