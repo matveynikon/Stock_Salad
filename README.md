@@ -4,7 +4,7 @@ Main dashboard consists of 4 sections in a grid, these are:
 2. News sentiments and summaries of custom stocks picked by user
 3. News sentiments and summaries of top stocks by sentiment
 4. News sentiments and summaries of lowest stocks by sentiment
-![demo image overall]()
+![demo image overall](overall_demo.png)
 ![demo image](demomac.png)
 
 This is just a prototype. Security vulnerabilities, backend infrastructure and other more technical aspects aren't taken into account.
