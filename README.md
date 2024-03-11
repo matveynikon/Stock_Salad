@@ -1,4 +1,8 @@
-A prototype SaaS that scrapes stock news and gives users stocks' overall news sentiments based on news articles, as well as gives users news summaries for all stocks. 
+A prototype SaaS that scrapes stock news and gives users:
+* Overall sentiment of S&P 500 stocks
+* Stocks' overall news sentiments based on news articles
+* News summaries for all stocks
+* Number of news articles mentioning each ticker in the last 2 days
 Main dashboard consists of 4 sections in a grid, these are:
 1. News sentiments and summaries of highest valued stocks
 2. News sentiments and summaries of custom stocks picked by user
