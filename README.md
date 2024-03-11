@@ -12,7 +12,7 @@ Main dashboard consists of 4 sections in a grid, these are:
 ![demo image overall](overall_demo.png)
 ![demo image](demomac.png)
 
-This is just a prototype. Security vulnerabilities, backend infrastructure and other more technical aspects aren't taken into account.
+This is just a prototype. Security vulnerabilities, scalable backend infrastructure and other more technical aspects aren't taken into account.
 
 This project uses the following libraries, frameworks and APIs:
 1. Stripe NodeJS API
